@@ -1,47 +1,49 @@
 #include <stdio.h>
+#include <string.h>
+#include <locale.h>
+#include <ctype.h>
 
-int main()
-{
-struct dados_usuario
+int main () {
+struct informacoes
 {
     char nome[200];
-    int idade;
-    float nota[2];
-
+    char data[200];
+    char rg[200];
+    char cpf[200];
 };
-struct dados_usuario inf[3];
-int i,j;
+struct informacoes inf[5];
+int i;
 
-for ( i = 0; i < 3; i++)
+for ( i = 0; i < 5; i++)
 {
+    printf ("Digite seu nome:");
+    gets (inf[i].nome);
 
-printf ("Digite seu nome:");
-gets (inf[i].nome);
+    printf ("Digite sua data de nascimento:");
+    gets (inf[i].data);
 
-printf ("Digite sua idade:");
-scanf ("%d", &inf[i].idade);
+    printf ("Digite seu RG:");
+    gets (inf[i].rg);
 
-for ( j = 0; j < 2; j++)
+    printf ("Digite seu CPF:");
+    gets (inf[i].cpf);
+
+    fflush(stdin);
+}
+
+printf("\n Exibindo Resultados... \n");
+for ( i = 0; i < 5; i++)
 {
-    printf ("Digite as notas:");
-    scanf ("%f",&inf[i].nota[j]);
-}
-fflush(stdin);
+    printf ("Seu nome:%s\n", inf[i].nome);
+    printf ("Sua data de nascimento:%s\n", inf[i].data);
+    printf ("Seu RG:%s\n", inf[i].rg);
+    printf ("Seu CPF:%s\n", inf[i].cpf);
 
 }
 
-system ("cls||clear"); 
 
-printf("\nExibindo Resultados...\n");
-for ( i = 0; i < 3; i++)
-{
-    printf ("\nNome do aluno:%s \n",inf[i].nome);
-    printf ("\n Idade do aluno:%d \n",inf[i].idade);
-    for ( j = 0; j < 2; j++)
-    {
-        printf ("\n Suas notas foram:%.1f \n",inf[i].nota[j]);
-    }
-    
-}
-return 0;
+
+
+
+    return 0;
 }
