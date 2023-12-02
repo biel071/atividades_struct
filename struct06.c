@@ -24,11 +24,11 @@ int main () {
 struct dados inf[3];
 struct dados cli[3];
 int i;
-printf ("Digite os dados do funcionario...\n");
 
 for ( i = 0; i < 3; i++)
 {
 
+printf ("Digite os dados do funcionario...\n");
 
 printf("Digite seu nome: \n");
 gets(inf[i].nome);
@@ -55,10 +55,10 @@ gets (cli[i].ende);
 }
 
 system ("cls||clear");
-printf ("\nDados do funcionario:\n");
 for ( i = 0; i < 3; i++)
 {
 
+printf ("\nDados do funcionario:\n");
 
 printf("Seu nome: %s \n", inf[i].nome);
     printf("Data de admissao: %s \n", inf[i].data);
